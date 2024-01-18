@@ -1,7 +1,7 @@
 // Avoid spawning an console window for the program.
 // This is ignored on other platforms.
 // https://msdn.microsoft.com/en-us/library/4cc7ya5b.aspx for more information.
-#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
+//#![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 #![allow(dead_code)]
 #![allow(unused_variables)]
 #![allow(unused_mut)]
