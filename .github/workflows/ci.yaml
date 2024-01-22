@@ -31,6 +31,8 @@ jobs:
         run:  rustc --print cfg 
       - name: release target cpus
         run:  rustc --print target-cpus
+      - name: clang version
+        run:  clang --version
       - name: Checkout
         uses: actions/checkout@v3
       - name: Tests
