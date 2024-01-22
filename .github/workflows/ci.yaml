@@ -27,8 +27,12 @@ jobs:
     name: Windows Tests
     runs-on: windows-latest
     steps:
+      - name: print rust flags
+        run: echo ${{ env.RUSTFLAGS }}
       - name: release opts
         run:  rustc --print cfg 
+      - name: release target cpus
+        run:  rustc --print target-cpus
       - name: Checkout
         uses: actions/checkout@v3
       - name: Tests
