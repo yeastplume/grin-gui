@@ -63,7 +63,7 @@ jobs:
           - name: Archive release
             uses: vimtor/action-zip@v1
             with:
-                files: target/release/grin-gui.exe
+                files: target/release/grin-gui.exe target/release/grin_gui.pdb
                 dest: target/release/grin-gui-${{  github.ref_name }}-win-x86_64.zip
           - name: Archive debug
             uses: vimtor/action-zip@v1

@@ -57,7 +57,16 @@ reqwest = { version = "0.11", features = ["json", "blocking"] }
 
 
 [profile.release]
-opt-level = 2
+opt-level = 3
+debug = true
+split-debuginfo = 'packed'
+debug-assertions = false
+overflow-checks = false
+lto = false
+panic = 'unwind'
+incremental = false
+codegen-units = 16
+rpath = false
 
 [target.'cfg(target_os =  "linux")'.dependencies]
 native-dialog = "0.5.5"
