@@ -52,12 +52,16 @@ jobs:
         name: Windows Release
         runs-on: windows-latest
         env:
-          ROARING_ARCH: x86-64-v2
+          ROARING_ARCH: x86-64-v1
         steps:
           - name: Checkout
             uses: actions/checkout@v3
           - name: Rust version
             run: rustup --version
+          - name: clean
+            run: cargo clean
+          - name: Display Env
+            run: env
           - name: Build
             run: cargo build --release
           - name: Build
